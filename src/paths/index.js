@@ -1,0 +1,1 @@
+export const baseUrl = "https://oopsfix-server-467422354049.asia-south2.run.app/api/debug-challenge/beginner "
