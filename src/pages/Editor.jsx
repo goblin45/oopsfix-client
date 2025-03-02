@@ -18,7 +18,6 @@ export default function Editor() {
     const [output, setOutput] = useState("");
     const [searchParams] = useSearchParams();
     const ruin = searchParams.get("ruin");
-    console.log(ruin);
     const generate = searchParams.get("generate");
     const level = searchParams.get("level");
 
@@ -52,7 +51,7 @@ export default function Editor() {
                 code: code,
             });
             const data = await response.data;
-            setHint(data.suggestions);
+            setHint(data.suggestions?.length > 0 ? data.suggestions : ["Code seems to work!"]);
             setOutput(data.vmResults.output || "Error: No output");
         } catch (error) {
             console.error(error);
