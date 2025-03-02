@@ -22,7 +22,7 @@ export default function CodeGenerator() {
   
         {isOpen && (
           <div className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md border border-gray-200">
-            {["Easy", "Medium", "Hard"].map((level) => (
+            {["Beginner", "Moderate", "Advanced"].map((level) => (
               <button
                 key={level}
                 onClick={() => handleOptionClick(level)}
